@@ -14,15 +14,14 @@ const HomeController = {
     }
     const data_caro = await Course.find({isDisable: false}).skip(pageNumber > 0 ? ((pageNumber - 1) * 4) : 0).limit(4)
    
-    const top4 = await Course.find({isDisable: false}).sort(({ viewWeekly: -1 })).limit(4)
+    const top4 = await Course.find({isDisable: false}).sort(({ rating: -1 })).limit(4)
     Course.find({}).then((courses) => { 
       courses = courses.filter((obj) => {
         return obj.isDisable === false
       }) 
      
-      const top_viewWeekly = courses.sort((a, b) => b.viewWeekly - a.viewWeekly);
-      const data_viewWeekly = ultil.multipleMongooseToOject(top_viewWeekly.slice(0, 4));
-      const top_view = courses.sort((a, b) => b.view - a.view);
+
+      const top_view = courses.sort((a, b) => b.viewWeekly - a.viewWeekly);
       const data_topView = ultil.multipleMongooseToOject(top_view.slice(0, 10));
       const top_date = courses.sort((a, b) => a.createdAt - b.createdAt);
       const data_topDate = ultil.multipleMongooseToOject(top_date.slice(0, 10));
@@ -102,7 +101,7 @@ const HomeController = {
             list_topDate1: ultil.getId(list_topDate1),
             list_topDate2: ultil.getId(list_topDate2),
             list_topDate3: ultil.getId(list_topDate3),
-            data_viewWeekly,
+           
             checkpag,
             topCategory,
             top4,

@@ -44,6 +44,16 @@ const courseController = {
         if (result_checked === true) {
           isBuy = true;
         }
+        const cur_view = docs.viewWeekly
+        const update_view = await Course.updateOne(
+          { _id: ID },
+          {
+            $set: {
+              viewWeekly: cur_view + 1
+            },
+          }
+        )
+        
         res.render('course/course', {
           course: docs,
           course_id: req.params.id,
