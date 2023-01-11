@@ -73,7 +73,7 @@
                       {{!-- {{#if isBuy}}
                       {{#ifEquals userdata.role 'Student'}}
                       <div class="main-border-button">
-                        <a href="" style="pointer-events: none;">You purchased this course</a>
+                        <a href="" style="pointer-events: none; width: fit-content;">You purchased this course</a>
                       </div>
                       {{/ifEquals}}
                       {{else}} --}}
@@ -86,32 +86,32 @@
                           <a href="" style="pointer-events: none;">You purchased this course</a>
                         </div>
                         {{else}}
-                       <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post">
+                         <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post" style="width: 40%;">
                           <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary text-center justify-content-center"
-                            style="display:flex; align-items:center; width: 40%;">Buy Now</a>
+                            style="display:flex; align-items:center; ;">Buy Now</a>
                         </form>
                         {{/if}}
                         {{else}}
                         {{#if checkedLecture}}
                         <div class="d-flex">
                           <form action="http://localhost:3000/course/edit/{{course._id}}" method="put">
-                            <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh;">Edit</a>
+                            <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh;text-align: center; display: flex; align-items: center;">Edit</a>
                           </form>
 
-                          <a href="/course/about/{{course._id}}" style="margin-left: 7px; height: 5vh;">Upload
+                          <a href="/course/about/{{course._id}}" style="margin-left: 7px; height: 5vh; text-align: center;display: flex; align-items: center; width: fit-content;">Upload
                             Video</a>
 
                         </div>
                         {{!-- <form action="http://localhost:3000/edit/{{course._id}}" method="put">
-                          <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh;">Edit</a>
+                          <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh; text-align: center;">Edit</a>
                         </form> --}}
 
                         {{/if}}
                         {{/ifEquals}}
                         {{else}}
-                        <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post">
+                         <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post" style="width: 40%;">
                           <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary text-center justify-content-center"
-                            style="display:flex; align-items:center; width: 40%;">Buy Now</a>
+                            style="display:flex; align-items:center; ;">Buy Now</a>
                         </form>
                         {{/ifEquals}}
 
