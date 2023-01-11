@@ -185,9 +185,10 @@
                                   </div>
                                 </div>
                               {{else}}
-                                <div class="justify-content-center text-center">
-                                  <div style="background-color: #eceb98; width: 100%; color: #3e3e0d;font-weight: 700"
-                                    class="d-flex justify-content-center text-center">
+                             
+                                <div class="justify-content-center text-center" style="width: 100%">
+                                  <div style="background-color: #eceb98; width: 50%; color: #3e3e0d;font-weight: 700;" 
+                                    class="justify-content-center text-center" id = "pot">
                                     Not complete
                                   </div>
                                 </div>
@@ -240,3 +241,21 @@
 
   </script>
 </body>
+<style>
+  #pot {
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 3s;
+}
+@-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  50% {
+    left:50%;
+  }
+  100% {
+    left: 0;    
+  }
+</style>

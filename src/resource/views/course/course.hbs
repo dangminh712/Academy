@@ -86,9 +86,9 @@
                           <a href="" style="pointer-events: none;">You purchased this course</a>
                         </div>
                         {{else}}
-                        <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post">
-                          <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary "
-                            style="display:flex; align-items:center; ;">Buy Now</a>
+                       <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post">
+                          <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary text-center justify-content-center"
+                            style="display:flex; align-items:center; width: 40%;">Buy Now</a>
                         </form>
                         {{/if}}
                         {{else}}
@@ -109,7 +109,10 @@
                         {{/if}}
                         {{/ifEquals}}
                         {{else}}
-                        <a href="/user/login" class="btn btn-primary " style="height: 6vh;">Buy Now</a>
+                        <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post">
+                          <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary text-center justify-content-center"
+                            style="display:flex; align-items:center; width: 40%;">Buy Now</a>
+                        </form>
                         {{/ifEquals}}
 
                       </div>
@@ -313,9 +316,10 @@
 
                   <div class="instructor-item">
 
+
                   </div>
                   <div class="instructor-paraphraph show">
-                    <p style="color: #000;">
+                    <p style="color: #000;" class = "text-muted">
                       {{{course.fullDesc}}}
                     </p>
                   </div>
@@ -404,7 +408,7 @@
                             <img src="/data/image/{{this.image}}" style="height: 30px;width: 30px;"
                               class="rounded-circle mt-2">
                             <div style="margin-left: 30px;">
-                              <li>{{this.name}}</li>
+                              <li style="font-family: bold; font-weight: bold">{{this.name}}</li>
                               {{#ifEquals this.rating 0}}
                               <li>None<i class="fa fa-star" style="color: #e75e8d;"></i> </li>
                               {{else}}
@@ -412,8 +416,8 @@
                               {{/ifEquals}}
                             </div>
                           </div>
-                          <div class="comment-student" style="margin: 10px;">
-                            <li>{{this.content}}</li>
+                          <div class="comment-student text-muted" style="margin: 10px;">
+                            <li  class ="ml-5">{{this.content}}</li>
                           </div>
                         </div>
                       </div>
@@ -442,7 +446,7 @@
                                 <img src="/data/image/{{this.image}}" style="height: 30px;width: 30px;"
                                   class="rounded-circle mt-2">
                                 <div style="margin-left: 30px;">
-                                  <li>{{this.name}}</li>
+                                  <li style="font-family: bold; font-weight: bold">{{this.name}}</li>
                                   {{#ifEquals this.rating 0}}
                                   <li>None<i class="fa fa-star" style="color: #e75e8d;"></i> </li>
                                   {{else}}
@@ -450,8 +454,8 @@
                                   {{/ifEquals}}
                                 </div>
                               </div>
-                              <div class="comment-student" style="margin: 10px;">
-                                <li>{{this.content}}</li>
+                              <div class="comment-student text-muted" style="margin: 10px;">
+                                <li class = "ml-5">{{this.content}}</li>
                               </div>
                             </div>
                           </div>
