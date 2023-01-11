@@ -95,15 +95,15 @@
                         {{#if checkedLecture}}
                         <div class="d-flex">
                           <form action="http://localhost:3000/course/edit/{{course._id}}" method="put">
-                            <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh;">Edit</a>
+                            <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh;text-align: center; display: flex; align-items: center;">Edit</a>
                           </form>
 
-                          <a href="/course/about/{{course._id}}" style="margin-left: 7px; height: 5vh;">Upload
+                          <a href="/course/about/{{course._id}}" style="margin-left: 7px; height: 5vh; text-align: center;display: flex; align-items: center; width: fit-content;">Upload
                             Video</a>
 
                         </div>
                         {{!-- <form action="http://localhost:3000/edit/{{course._id}}" method="put">
-                          <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh;">Edit</a>
+                          <a href="javascript:;" onclick="parentNode.submit();" style="height: 5vh; text-align: center;">Edit</a>
                         </form> --}}
 
                         {{/if}}
