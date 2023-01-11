@@ -73,7 +73,7 @@
                       {{!-- {{#if isBuy}}
                       {{#ifEquals userdata.role 'Student'}}
                       <div class="main-border-button">
-                        <a href="" style="pointer-events: none;">You purchased this course</a>
+                        <a href="" style="pointer-events: none; width: fit-content;">You purchased this course</a>
                       </div>
                       {{/ifEquals}}
                       {{else}} --}}
@@ -88,7 +88,7 @@
                         {{else}}
                         <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post">
                           <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary "
-                            style="display:flex; align-items:center; ;">Buy Now</a>
+                            style="display:flex; align-items:center; text-align: center; width: fit-content;">Buy Now</a>
                         </form>
                         {{/if}}
                         {{else}}
@@ -109,7 +109,7 @@
                         {{/if}}
                         {{/ifEquals}}
                         {{else}}
-                        <a href="/user/login" class="btn btn-primary " style="height: 6vh;">Buy Now</a>
+                        <a href="/user/login" class="btn btn-primary d-flex align-items-center" style="height: 6vh; width: fit-content;">Buy Now</a>
                         {{/ifEquals}}
 
                       </div>
