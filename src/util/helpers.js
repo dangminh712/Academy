@@ -40,7 +40,7 @@ export default function helpers(hbs) {
   hbs.handlebars.registerHelper("new_course", function (data) {
     const currentDate = new Date()  
     console.log("Typeof: "+ data+ typeof(data)) 
-    const result = (currentDate.getTime() - data.getTime()) <= 60 * 60 * 1000 * 24 * 1
+    const result = (currentDate.getTime() - data.getTime()) <= 60 * 60 * 1000 * 24 * 2
     console.log("Result: ", result)
     return result
   });

@@ -87,8 +87,8 @@
                         </div>
                         {{else}}
                          <form action="http://localhost:3000/user/buyProduct/{{course._id}}" method="post" style="width: 40%;">
-                          <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary text-center justify-content-center"
-                            style="display:flex; align-items:center; ;">Buy Now</a>
+                          <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-primary"
+                            style="width: fit-content;">Buy Now</a>
                         </form>
                         {{/if}}
                         {{else}}
@@ -110,8 +110,8 @@
                         {{/ifEquals}}
                         {{else}}
                          <div style="width: 40%;">
-                          <a href="/user/login" onclick="" class="btn btn-primary text-center justify-content-center"
-                            style="display:flex; align-items:center; ;">Buy Now</a>
+                          <a href="/user/login" onclick="" class="btn btn-primary"
+                            style="width: fit-content;">Buy Now</a>
                         </div>
                         {{/ifEquals}}
 
@@ -350,9 +350,9 @@
                         </div>
                       </a>
                       <br>
-                      <h4 style="color: #e75e8d;height:5vh;font-weight:600;width: 100%;" class="shortDescription">
+                      <p style="color: #e75e8d;height:8vh;font-weight:600;width: 100%;font-size:15px;" class="shortDescription">
                         {{this.name}}
-                      </h4>
+                      </p>
                       <div class="down-content d-flex justify-content-between">
                         
                         <h4 style="font-weight: 700;"> {{format_number (cal_discount this.price this.discount)}}</h4>
@@ -632,11 +632,12 @@
     display: none;
   }
   .shortDescription {
-        display: -webkit-box;
-   -webkit-line-clamp: 1;
+  display: -webkit-box;
+   -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
    overflow: hidden;
    text-overflow: ellipsis;
+   width: 100px;
   }
   body {
     height: 100%

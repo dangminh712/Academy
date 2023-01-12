@@ -51,22 +51,22 @@
                             {{#if orderby}}
                               {{#ifEquals orderby "0"}}
                                 <option selected value="0">Most Relevant</option>
-                                <option value="numberStudentRate -1">Highest Rating</option>
+                                <option value="rating -1">Highest Rating</option>
                                 <option value="price 1">Lowest Price</option>
                               {{/ifEquals}}
                               {{#ifEquals orderby "-1"}}
                                 <option value="0">Most Relevant</option>
-                                <option selected value="numberStudentRate -1">Highest Rating</option>
+                                <option selected value="rating -1">Highest Rating</option>
                                 <option value="price 1">Lowest Price</option>
                               {{/ifEquals}}
                               {{#ifEquals orderby "1"}}
                                 <option value="0">Most Relevant</option>
-                                <option value="numberStudentRate -1">Highest Rating</option>
+                                <option value="rating -1">Highest Rating</option>
                                 <option selected value="price 1">Lowest Price</option>
                               {{/ifEquals}}
                             {{else}}
                               <option selected value="0">Most Relevant</option>
-                              <option value="numberStudentRate -1">Highest Rating</option>
+                              <option value="rating -1">Highest Rating</option>
                               <option value="price 1">Lowest Price</option>
                             {{/if}}
 
@@ -96,17 +96,17 @@
                         <tr class="clickable " onclick="window.location='/course/{{this._id}}'">
                           <td class="image"><img src="/data/image/{{this.image}}" alt=""></td>
                           <td class="product">
-                            <strong> {{this.name}}</strong>
-                            <br>{{this.category}}
+                            <strong style="font-size: 20px;"> {{this.name}}</strong>
+                            <p style="font-size: 16px;font-weight: 600;margin-bottom:0">{{this.category}}</p>
                             <p style="font-size: 15px;font-weight: 500;margin-bottom:0">{{this.shortDesc}}</p>
-                            <p style="font-size: 15px;font-weight: 500;margin-bottom:0">{{this.nameLecturer}}</p>
-                            {{#ifEquals this.numberStudentRate "0"}}
+                            <p style="font-size: 18px;font-weight: 600;margin-bottom:0;color:#E75E8D">{{this.nameLecturer}}</p>
+                            {{#ifEquals this.rating "0"}}
                               {{else}}
-                            <span style="color: #f39c12;">{{this.numberStudentRate}}<i class="fa fa-star"></i></span>
+                            <span style="color: #f39c12;">{{this.rating}}<i class="fa fa-star"></i></span>
                             {{/ifEquals }}
                             <div class="d-flex">
                               {{#if (isBestseller this.participant)}}
-                                <div style="background-color: #eceb98; width: 100px; color: #3e3e0d;font-weight: 700"
+                                <div style="background-color: #eceb98; width: 100px; color: #3e3e0d;font-weight: 700;margin-left:30px"
                                   class="d-flex justify-content-center">
                                   Bestseller
                                 </div>
