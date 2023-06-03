@@ -126,9 +126,9 @@ This is an Online Academy web application that consists of the following modules
 - Implement password change functionality using the bcrypt algorithm for password encryption
 
 
-##Thực hiện bởi 3 sinh viên:
-###20127562 - Nguyễn Đăng Minh
-###20127564 - Trần Tuấn Minh
-###20127232 - Nguyễn Thái Dương
+## Make by 3 members:
+### 20127562 - Nguyễn Đăng Minh
+### 20127564 - Trần Tuấn Minh
+### 20127232 - Nguyễn Thái Dương
 
 
